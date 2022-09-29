@@ -1,0 +1,46 @@
+@import "../colors.scss";
+
+.carousel-container {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    button {
+        position: absolute;
+        z-index: 3;
+        background-color: #ffffff77;
+        border-radius: 4px;
+        transition: background-color .2s;
+        top: 40%;
+        padding: .5em 1em;
+        cursor: pointer;
+
+        @media (max-width: 600px) {
+            background-color: #fff;
+        }
+
+        &:hover {
+            @include backgroundAccentColor(true);
+        }
+
+        &:active {
+            @include backgroundPrimaryColor(true);
+        }
+    }
+
+    &:hover {
+        button {
+            background-color: #ffffff;
+        }
+    }
+
+    .prior-btn {
+        left: .5em;
+    }
+
+    .next-btn {
+        right: .5em;
+    }
+}

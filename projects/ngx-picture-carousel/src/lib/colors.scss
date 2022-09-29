@@ -1,0 +1,20 @@
+$primaryColor: #004b8e;
+$accentColor: #f57421;
+
+@mixin backgroundColor($color, $textColor, $isImportant: false) {
+    @if not $isImportant {
+        background-color: $color;
+        color: $textColor;
+    } @else {
+        background-color: $color !important;
+        color: $textColor !important;
+    }
+}
+
+@mixin backgroundPrimaryColor($isImportant: false) {
+    @include backgroundColor($primaryColor, white, $isImportant);
+}
+
+@mixin backgroundAccentColor($isImportant: false) {
+    @include backgroundColor($accentColor, white, $isImportant)
+}

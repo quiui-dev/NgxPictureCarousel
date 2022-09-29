@@ -1,14 +1,18 @@
 {
   "name": "ngx-picture-carousel",
   "version": "0.0.0",
+  "repository": {
+    "url": "https://github.com/quiui-dev/NgxPictureCarousel.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:lib": "ng build NgxPictureCarousel && cd dist/ngx-picture-carousel && npm pack",
+    "publish": "cd dist/ngx-picture-carousel && npm publish -w quiui"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^14.0.0",
     "@angular/common": "^14.0.0",
@@ -23,6 +27,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.4",
     "@angular/cli": "~14.2.1",
     "@angular/compiler-cli": "^14.0.0",
     "@types/jasmine": "~4.0.0",
@@ -32,6 +37,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^14.2.0",
     "typescript": "~4.7.2"
   }
 }

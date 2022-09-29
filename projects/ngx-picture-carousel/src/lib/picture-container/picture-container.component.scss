@@ -1,0 +1,43 @@
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+    img {
+        height: 100%;
+    }
+
+    @mixin animation($slideTo) {
+        animation-name: slide-#{$slideTo};
+        animation-duration: .2s;
+    }
+
+    .anim-slide-left {
+        @include animation('left');
+    }
+
+    .anim-slide-right {
+        @include animation('right');
+    }
+
+    @keyframes slide-left {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes slide-right {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+}
