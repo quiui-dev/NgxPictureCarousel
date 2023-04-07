@@ -3,6 +3,9 @@ NgxPictureCarousel
 
 Easy to use picture carousel.
 
+# Version ^1.0.0
+Support for Angular 15
+
 # Features
 - Virtual scrolling: do not render all images at once, saving memory and increasing performance.
 - Easy width and height control through properties
