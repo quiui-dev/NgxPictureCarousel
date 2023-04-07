@@ -11,7 +11,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:lib": "ng build NgxPictureCarousel && cd dist/ngx-picture-carousel && npm pack",
-    "publish": "cd dist/ngx-picture-carousel && npm publish -w quiui"
+    "publish": "cd dist/ngx-picture-carousel && npm publish"
   },
   "dependencies": {
     "@angular/animations": "^15.2.6",
